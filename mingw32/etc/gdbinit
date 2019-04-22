@@ -1,0 +1,10 @@
+python
+import sys
+basepath = sys.path[0]
+sys.path.insert(0, sys.path[0] + '/../../gcc-7.3.0/python')
+from libstdcxx.v6.printers import register_libstdcxx_printers
+
+sys.path.insert(0, basepath + '/../../qt5/debugger')
+from qt import register_qt_printers
+register_qt_printers(None)
+end
